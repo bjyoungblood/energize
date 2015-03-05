@@ -34,17 +34,23 @@ header {
     } // nav.top-nav
 
     a.button-collapse {
+
       position : absolute;
       top : 0;
       left : 7.5%;
+
       margin-left : 1.5rem;
+
       color : #fff;
       opacity : 0.75;
-      font-size : 32px;
+
+      font-size : $top-nav-font-size;
       z-index : 2;
 
+      cursor : pointer;
+
       &.full {
-        line-height : 122px;
+        line-height : $top-nav-mobile-height;
       }
 
       @media #{$small-and-down} {
