@@ -1,0 +1,19 @@
+.side-nav {
+
+  .logo {
+
+    @extend .valign-wrapper;
+
+    div {
+      @extend .valign;
+
+      font-size : 150%;
+      margin : 0 auto;
+    }
+
+    height : $top-nav-height;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+}
