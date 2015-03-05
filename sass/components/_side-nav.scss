@@ -1,19 +1,40 @@
-.side-nav {
+ul.side-nav {
 
-  .logo {
+  li {
 
-    @extend .valign-wrapper;
+    line-height : $side-nav-line-height;
 
-    div {
-      @extend .valign;
-
-      font-size : 150%;
-      margin : 0 auto;
+    &.bold {
+      font-weight : 500;
     }
 
-    height : $top-nav-height;
+    &.logo-wrapper {
 
-    border-bottom: 1px solid #ddd;
+      @extend .valign-wrapper;
+
+      height : $top-nav-height;
+      margin-bottom : 1rem;
+
+      border-bottom: 1px solid #ddd;
+
+      &:hover {
+        background-color : transparent;
+      }
+
+      .logo {
+        @extend .valign;
+
+        font-size : 150%;
+        margin : 0 auto;
+      }
+
+    }
+
+    a {
+      cursor : pointer;
+      padding : 0 15px;
+    }
+
   }
 
 }

@@ -5,8 +5,9 @@ import React from 'react';
 import AppHeader from 'src/layout/app-header';
 import TopNav from 'src/layout/top-nav';
 import SideNav from 'src/layout/side-nav';
-import SideNavLogo from 'src/layout/side-nav/logo';
 import SideNavToggle from 'src/layout/side-nav/toggle';
+import SideNavLogo from 'src/layout/side-nav/logo';
+import SideNavItem from 'src/layout/side-nav/item';
 import IconButton from 'src/icon-button';
 import Container from 'src/container';
 import Row from 'src/row';
@@ -27,6 +28,12 @@ const HomePage = React.createClass({
             <SideNavToggle />
             <SideNav>
               <SideNavLogo>asdf</SideNavLogo>
+              <SideNavItem bold={true} active={true}>
+                <a>asdf</a>
+              </SideNavItem>
+              <SideNavItem bold={true}>
+                <a>asdf</a>
+              </SideNavItem>
             </SideNav>
           </AppHeader>
 

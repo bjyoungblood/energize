@@ -7,8 +7,8 @@ const SideNavLogo = React.createClass({
   render() {
 
     return (
-      <li {...this.props} className="logo">
-        <div>{this.props.children}</div>
+      <li {...this.props} className="logo-wrapper">
+        <div className="logo">{this.props.children}</div>
       </li>
     );
   },
