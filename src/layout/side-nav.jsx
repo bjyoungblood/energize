@@ -5,23 +5,8 @@ import cx from 'classnames';
 
 const SideNav = React.createClass({
 
-  propTypes : {
-    logo : React.PropTypes.node,
-    fixed : React.PropTypes.bool, // @todo
-  },
-
-  getDefaultProps() {
-    return {
-      fixed : true,
-      logo : null,
-    };
-  },
-
   render() {
-    let classes = cx({
-      'side-nav' : true,
-      'fixed' : this.props.fixed,
-    });
+    let classes = cx(this.props.className, 'side-nav', 'fixed');
 
     return (
       <ul className={classes}>

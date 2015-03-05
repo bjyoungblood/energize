@@ -28,8 +28,7 @@ const HomePage = React.createClass({
                 <IconButton type="navigation-menu" />
               </a>
             </Container>
-            <SideNav logo={<a href="">Hi</a>}
-                     fixed={true}>
+            <SideNav>
               <SideNavLogo>asdf</SideNavLogo>
             </SideNav>
           </AppHeader>
