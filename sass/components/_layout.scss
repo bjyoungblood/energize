@@ -5,16 +5,15 @@ header {
     nav.top-nav {
       @include box-shadow(none);
       height : $top-nav-height;
-      line-height : $top-nav-height;
 
       @media #{$medium-and-down} {
         height : $top-nav-mobile-height;
-        text-align: center;
+        text-align : center;
       }
 
       .nav-wrapper {
         @media #{$medium-and-down} {
-          text-align: center;
+          text-align : center;
         }
 
         a.page-title {
