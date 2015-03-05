@@ -6,6 +6,7 @@ import AppHeader from 'src/layout/app-header';
 import TopNav from 'src/layout/top-nav';
 import SideNav from 'src/layout/side-nav';
 import SideNavLogo from 'src/layout/side-nav/logo';
+import SideNavToggle from 'src/layout/side-nav/toggle';
 import IconButton from 'src/icon-button';
 import Container from 'src/container';
 import Row from 'src/row';
@@ -23,11 +24,7 @@ const HomePage = React.createClass({
             <TopNav>
               <a className="page-title">Page Title</a>
             </TopNav>
-            <Container>
-              <a className="button-collapse top-nav full">
-                <IconButton type="navigation-menu" />
-              </a>
-            </Container>
+            <SideNavToggle />
             <SideNav>
               <SideNavLogo>asdf</SideNavLogo>
             </SideNav>
