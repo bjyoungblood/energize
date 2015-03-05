@@ -1,0 +1,20 @@
+.collapsible-body {
+
+  @include box-sizing(border-box);
+
+  display : block;
+  overflow : auto;
+
+  border-bottom: 1px solid $collapsible-border-color;
+
+  &.collapsed {
+    height : 0;
+    overflow: hidden;
+  }
+
+  p {
+    margin: 0;
+    padding: 2rem;
+  }
+
+}

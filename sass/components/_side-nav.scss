@@ -1,8 +1,11 @@
 ul.side-nav {
 
+  overflow-y : scroll;
+
   li {
 
     line-height : $side-nav-line-height;
+    padding : 0 1rem;
 
     &.bold {
       font-weight : 500;
@@ -30,9 +33,16 @@ ul.side-nav {
 
     }
 
+    .collapsible-header {
+      font-weight : 500;
+    }
+
+    .collapsible-body {
+      transition : height 2s linear;
+    }
+
     a {
       cursor : pointer;
-      padding : 0 15px;
     }
 
   }
