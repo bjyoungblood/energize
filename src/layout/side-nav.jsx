@@ -3,6 +3,10 @@
 import React from 'react';
 import cx from 'classnames';
 
+import Item from './side-nav/item';
+import Logo from './side-nav/logo';
+import Toggle from './side-nav/toggle';
+
 import TransitionIn from '../transition-in';
 import LayeredComponent from '../mixins/layered-component';
 
@@ -52,5 +56,9 @@ const SideNav = React.createClass({
     );
   },
 });
+
+SideNav.Item = Item;
+SideNav.Logo = Logo;
+SideNav.Toggle = Toggle;
 
 export default SideNav;

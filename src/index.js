@@ -9,8 +9,15 @@ export default {
   IconButton : require('./icon-button'),
 
   AppHeader : require('./layout/side-nav'),
-  SideNav : require('./layout/side-nav'),
-  SideNavLogo : require('./layout/side-nav/logo'),
   TopNav : require('./layout/top-nav'),
+  SideNav : require('./layout/side-nav'),
+
+  Modal : require('./modal'),
+
+  Collapsible : require('./collapsible'),
+
+  // Utilities
+  LayeredComponentMixin : require('./mixins/layered-component'),
+  TransitionIn : require('./transition-in'),
 
 };

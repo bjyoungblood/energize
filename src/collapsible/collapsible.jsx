@@ -3,6 +3,8 @@
 import React from 'react';
 import cx from 'classnames';
 
+import Section from './section';
+
 const Collapsible = React.createClass({
 
   getDefaultProps() {
@@ -22,5 +24,7 @@ const Collapsible = React.createClass({
   },
 
 });
+
+Collapsible.Section = Section;
 
 export default Collapsible;
