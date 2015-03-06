@@ -5,28 +5,34 @@
   &.hidden {
     display : none;
   }
-}
 
-.modal-fade-enter {
-  opacity : 0.1;
-  transform : translateY(-100px);
+  &.modal-fade-enter {
+    opacity : 0.1;
+    transform : translateY(-100px);
 
-  @include transition(all 0.5s $ease-in-quart);
+    @include transition(all 0.5s $ease-in-quart);
 
-  &.modal-fade-enter-active {
+    &.modal-fade-enter-active {
+      opacity : 1;
+      transform : translateY(0);
+    }
+  }
+
+  &.modal-fade-leave {
     opacity : 1;
     transform : translateY(0);
+
+    @include transition(all 0.2s $ease-out-quart);
+
+    &.modal-fade-leave-active {
+      opacity : 0;
+      transform : translateY(-100px);
+    }
   }
 }
 
-.modal-fade-leave {
-  opacity : 1;
-  transform : translateY(0);
-
-  @include transition(all 0.2s $ease-out-quart);
-
-  &.modal-fade-leave-active {
-    opacity : 0;
-    transform : translateY(-100px);
+.overlay {
+  &.modal-overlay {
+    z-index : 999;
   }
 }

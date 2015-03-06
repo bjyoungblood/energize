@@ -36,8 +36,6 @@ let Modal = React.createClass({
       );
     }
 
-    console.log(modal);
-
     return (
       <TransitionIn transitionName="modal-fade">
         {modal}
@@ -46,15 +44,20 @@ let Modal = React.createClass({
   },
 
   renderLayer() {
+    let overlay;
 
-    let classes = cx({
-      overlay : true,
-      'modal-overlay' : true,
-      visible : this.props.visible,
-    });
+    if (this.props.visible === true) {
+      overlay = (
+        <div key="overlay"
+             className="overlay modal-overlay"
+             onClick={this.props.onBackgroundClick} />
+      );
+    }
 
     return (
-      <div className={classes} onClick={this.props.onBackgroundClick} />
+      <TransitionIn transitionName="overlay-fade">
+        {overlay}
+      </TransitionIn>
     );
   },
 });

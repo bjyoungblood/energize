@@ -1,6 +1,6 @@
 .overlay {
 
-  @include transition(opacity 0.6s $ease-in-quart);
+  display : block;
 
   position : fixed;
   top : 0;
@@ -8,22 +8,32 @@
   bottom : 0;
   right : 0;
 
-  height : 0;
-  width : 0;
-
   background : #000;
-  opacity : 0;
 
   will-change : opacity;
 
-  &.visible {
-    height : 115%;
-    width : 100%;
-    opacity : 0.45;
-    display : block;
+  height : 115%;
+  width : 100%;
+  opacity : 0.45;
+
+  &.overlay-fade-enter {
+    opacity : 0.1;
+
+    @include transition(opacity 0.5s $ease-in-quart);
+
+    &.overlay-fade-enter-active {
+      opacity : 0.45;
+    }
   }
 
-  &.modal-overlay {
-    z-index : 999;
+  &.overlay-fade-leave {
+    opacity : 1;
+
+    @include transition(opacity 0.2s $ease-out-quart);
+
+    &.overlay-fade-leave-active {
+      opacity : 0;
+    }
   }
 }
+

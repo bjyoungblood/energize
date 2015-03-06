@@ -3,6 +3,7 @@
 import React from 'react';
 import cx from 'classnames';
 
+import TransitionIn from '../transition-in';
 import LayeredComponent from '../mixins/layered-component';
 
 const SideNav = React.createClass({
@@ -34,13 +35,20 @@ const SideNav = React.createClass({
 
   renderLayer() {
 
-    let classes = cx({
-      overlay : true,
-      visible : this.props.open,
-    });
+    let overlay;
+
+    if (this.props.open) {
+      overlay = (
+        <div key="overlay"
+             className="overlay side-nav-overlay"
+             onClick={this.props.onDismiss} />
+      );
+    }
 
     return (
-      <div className={classes} onClick={this.props.onDismiss} />
+      <TransitionIn transitionName="overlay-fade">
+        {overlay}
+      </TransitionIn>
     );
   },
 });

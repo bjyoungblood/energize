@@ -56,3 +56,15 @@ ul.side-nav {
   }
 
 }
+
+.overlay {
+  &.side-nav-overlay {
+    &.overlay-fade-enter {
+      @include transition(opacity 0.6s $ease-out-quart);
+    }
+
+    &.overlay-fade-leave {
+      @include transition(opacity 0.6s $ease-in-quart);
+    }
+  }
+}
