@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/bjyoungblood/energize",
   "dependencies": {
-    "classnames": "^1.1.4"
+    "classnames": "^1.1.4",
+    "react": "^0.12.2"
   },
   "devDependencies": {
     "autoprefixer-loader": "^1.2.0",
@@ -30,7 +31,6 @@
     "css-loader": "^0.9.1",
     "html-webpack-plugin": "^1.1.0",
     "materialize-css": "^0.95.3",
-    "react": "^0.12.2",
     "react-hot-loader": "^1.1.7",
     "react-router": "^0.12.4",
     "react-tap-event-plugin": "^0.1.4",
