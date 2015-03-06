@@ -9,7 +9,7 @@ window.React = React;
 // Initializing touch events
 React.initializeTouchEvents(true);
 
-import '../sass/main.scss';
+import './sass/main.scss';
 
 document.addEventListener('DOMContentLoaded', function() {
   router.run(function startApplication(Handler, state) {
