@@ -10,6 +10,7 @@ import SideNavLogo from 'src/layout/side-nav/logo';
 import SideNavItem from 'src/layout/side-nav/item';
 import Collapsible from 'src/collapsible/collapsible';
 import CollapsibleSection from 'src/collapsible/section';
+import Modal from 'src/modal';
 import IconButton from 'src/icon-button';
 import Container from 'src/container';
 import Row from 'src/row';
@@ -18,7 +19,15 @@ import Col from 'src/col';
 const HomePage = React.createClass({
 
   getInitialState() {
-    return { collapsed : true, open : false };
+    return {
+      collapsed : true,
+      open : false,
+      modal : false,
+    };
+  },
+
+  toggleModal() {
+    this.setState({ modal : ! this.state.modal });
   },
 
   onCollapseToggle() {
@@ -37,7 +46,9 @@ const HomePage = React.createClass({
         <div className="app-content">
 
           <AppHeader fixedNav={true}>
-
+            <TopNav>
+              <a className="page-title">Page Title</a>
+            </TopNav>
             <SideNavToggle onClick={this.sideNavToggle} />
             <SideNav open={this.state.open} onDismiss={this.sideNavToggle}>
               <SideNavLogo>asdf</SideNavLogo>
@@ -75,6 +86,7 @@ const HomePage = React.createClass({
                   </ul>
                 </CollapsibleSection>
 
+
               </Collapsible>
 
               <SideNavItem bold={true}>
@@ -86,10 +98,18 @@ const HomePage = React.createClass({
               </SideNavItem>
 
             </SideNav>
+            <Modal visible={this.state.modal} onBackgroundClick={this.toggleModal}>
+              <Modal.Content>asdf</Modal.Content>
+              <Modal.Footer>
+                <a href="#" className="waves-effect waves-green btn-flat">Agree</a>
+              </Modal.Footer>
+            </Modal>
           </AppHeader>
 
           <Row>
-            <Col sm={12} md={4} lg={3}>m3</Col>
+            <Col sm={12} md={4} lg={3}>m3
+              <a onClick={this.toggleModal}>MODAL!</a>
+            </Col>
             <Col sm={12} md={8} lg={9}>m9</Col>
           </Row>
 
