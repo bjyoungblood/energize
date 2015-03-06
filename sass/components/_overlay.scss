@@ -19,8 +19,11 @@
   &.visible {
     height : 115%;
     width : 100%;
-    // z-index : 99999;
     opacity : 0.45;
     display : block;
+  }
+
+  &.modal-overlay {
+    z-index : 999;
   }
 }
