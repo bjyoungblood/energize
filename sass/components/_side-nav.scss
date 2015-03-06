@@ -3,7 +3,7 @@ ul.side-nav {
   overflow-y : scroll;
 
   &.fixed {
-    @include transition(all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+    @include transition(all 0.6s $ease-in-quart);
 
     &.open {
 
