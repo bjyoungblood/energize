@@ -2,6 +2,18 @@ ul.side-nav {
 
   overflow-y : scroll;
 
+  &.fixed {
+    @include transition(all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+
+    &.open {
+
+      @media #{$medium-and-down} {
+        left : 0;
+      }
+
+    }
+  }
+
   li {
 
     line-height : $side-nav-line-height;
@@ -35,10 +47,6 @@ ul.side-nav {
 
     .collapsible-header {
       font-weight : 500;
-    }
-
-    .collapsible-body {
-      transition : height 2s linear;
     }
 
     a {

@@ -1,0 +1,26 @@
+.overlay {
+
+  @include transition(opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1));
+
+  position : fixed;
+  top : 0;
+  left : 0;
+  bottom : 0;
+  right : 0;
+
+  height : 0;
+  width : 0;
+
+  background : #000;
+  opacity : 0;
+
+  will-change : opacity;
+
+  &.visible {
+    height : 115%;
+    width : 100%;
+    // z-index : 99999;
+    opacity : 0.45;
+    display : block;
+  }
+}

@@ -18,11 +18,16 @@ import Col from 'src/col';
 const HomePage = React.createClass({
 
   getInitialState() {
-    return { collapsed : true };
+    return { collapsed : true, open : false };
   },
 
   onCollapseToggle() {
     this.setState({ collapsed : ! this.state.collapsed });
+  },
+
+  sideNavToggle() {
+    console.log(this.state);
+    this.setState({ open : ! this.state.open });
   },
 
   render() {
@@ -32,11 +37,9 @@ const HomePage = React.createClass({
         <div className="app-content">
 
           <AppHeader fixedNav={true}>
-            <TopNav>
-              <a className="page-title">Page Title</a>
-            </TopNav>
-            <SideNavToggle />
-            <SideNav>
+
+            <SideNavToggle onClick={this.sideNavToggle} />
+            <SideNav open={this.state.open} onDismiss={this.sideNavToggle}>
               <SideNavLogo>asdf</SideNavLogo>
               <SideNavItem bold={true} active={true}>
                 <a>asdf</a>
