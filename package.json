@@ -2,7 +2,7 @@
   "name": "energize",
   "version": "0.0.0",
   "description": "React components for Materialize CSS",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prepublish": "make dist",
     "test": "echo \"Error: no test specified\" && exit 1"
