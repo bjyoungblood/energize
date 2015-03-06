@@ -25,6 +25,9 @@
     "classnames": "^1.1.4",
     "react": "^0.12.2"
   },
+  "peerDependencies": {
+    "materialize-css": "^0.95.0"
+  },
   "devDependencies": {
     "autoprefixer-loader": "^1.2.0",
     "babel": "^4.6.6",
