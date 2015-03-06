@@ -34,7 +34,6 @@ const SideNav = React.createClass({
 
   renderLayer() {
 
-    console.log(this.props);
     let classes = cx({
       overlay : true,
       visible : this.props.open,
