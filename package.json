@@ -4,6 +4,7 @@
   "description": "React components for Materialize CSS",
   "main": "index.js",
   "scripts": {
+    "prepublish": "make dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -34,7 +35,7 @@
     "react-hot-loader": "^1.1.7",
     "react-router": "^0.12.4",
     "react-tap-event-plugin": "^0.1.4",
-    "sass-loader": "^0.4.0",
+    "sass-loader": "^0.4.1",
     "style-loader": "^0.8.3",
     "url-loader": "^0.5.5",
     "webpack": "^1.7.2",
