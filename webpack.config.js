@@ -1,3 +1,4 @@
+/*eslint no-var:0,strict:0*/
 'use strict';
 
 var webpack = require('webpack');
@@ -31,8 +32,8 @@ var output = {
 
 if (process.env.NODE_ENV === 'development') {
   plugins.push(new webpack.NoErrorsPlugin());
-  output.devtoolModuleFilenameTemplate = "file://[absolute-resource-path]";
-  output.devtoolFallbackModuleFilenameTemplate = "file://[absolute-resource-path]?[hash]";
+  output.devtoolModuleFilenameTemplate = 'file://[absolute-resource-path]';
+  output.devtoolFallbackModuleFilenameTemplate = 'file://[absolute-resource-path]?[hash]';
 }
 
 module.exports = {

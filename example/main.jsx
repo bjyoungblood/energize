@@ -1,4 +1,4 @@
-/* global document */
+/* global window,document */
 
 import React from 'react';
 import router from './router';

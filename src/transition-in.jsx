@@ -7,6 +7,12 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
+/*
+ * ReactCSSTransitionGroup won't transition its children if they are present
+ * on the component's initial render, so it renders an empty transition group,
+ * then immediately re-renders with any children as soon as it has mounted,
+ * which allows for properly transitioning children.
+ */
 const ReactCSSTransitionGroupAppear = React.createClass({
 
   propTypes: {
@@ -24,8 +30,8 @@ const ReactCSSTransitionGroupAppear = React.createClass({
 
   getDefaultProps: function() {
     return {
-      transitionEnter  : true,
-      transitionLeave  : true,
+      transitionEnter : true,
+      transitionLeave : true,
       transitionAppear : true
     };
   },
@@ -36,26 +42,26 @@ const ReactCSSTransitionGroupAppear = React.createClass({
     });
   },
 
-  render: function (){
+  render: function() {
 
-    var children;
+    let children;
 
     if (! this.props.transitionAppear) {
+      // if there is no appear transition, render the children now
       children = this.props.children;
-    } else {
-      if (this.state.mounted) {
-        children = this.props.children;
-      }
+    } else if (this.state.mounted) {
+      // if we have already mounted, it's okay to render the children
+      children = this.props.children;
     }
 
-    return(
+    return (
       <ReactCSSTransitionGroup
         transitionName={this.props.transitionName}
         transitionEnter={this.props.transitionEnter}
         transitionLeave={this.props.transitionLeave}>
         {children}
-      </ReactCSSTransitionGroup >
-    )
+      </ReactCSSTransitionGroup>
+    );
   }
 });
 
