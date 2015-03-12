@@ -1,6 +1,4 @@
-'use strict';
-
-export default {
+module.exports = {
 
   Container : require('./container'),
   Row : require('./row'),

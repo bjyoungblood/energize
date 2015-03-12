@@ -1,5 +1,3 @@
-'use strict';
-
 /*
  * Adapted from Khan Academy's react-components
  *
