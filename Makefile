@@ -1,5 +1,4 @@
-JSCS = node_modules/.bin/jscs
-JSHINT = node_modules/.bin/jshint
+ESLINT = node_modules/.bin/eslint
 BABEL = node_modules/.bin/babel
 WEBPACK = node_modules/webpack/bin/webpack.js
 DEVSERVER = node_modules/webpack-dev-server/bin/webpack-dev-server.js
@@ -21,6 +20,5 @@ dev:
 	NODE_ENV=development $(DEVSERVER) --content-base dist/ --hot --devtool eval-source-map --progress --colors --debug --output-pathinfo
 
 lint:
-	$(JSHINT) .
-	$(JSCS) -c .jscsrc .
+	$(ESLINT) -c .eslintrc *.js src/** example/**
 
