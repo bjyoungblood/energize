@@ -14,6 +14,8 @@ export default {
 
   Modal : require('./modal'),
 
+  Table : require('./table'),
+
   Collapsible : require('./collapsible/collapsible'),
 
   // Utilities
