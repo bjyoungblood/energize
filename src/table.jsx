@@ -14,7 +14,7 @@ const Table = React.createClass({
 
   render: function () {
 
-    var classes = {
+    let classes = cx(this.props.className, {
       'responsive-table' : this.props.responsive,
       'striped' : this.props.striped,
       'bordered' : this.props.bordered,
@@ -23,7 +23,7 @@ const Table = React.createClass({
     };
 
     return (
-      <table {...this.props} className={cx(classes)}>
+      <table {...this.props} className={classes}>
         {this.props.children}
       </table>
     );
