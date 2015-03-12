@@ -8,7 +8,7 @@ export default {
 
   IconButton : require('./icon-button'),
 
-  AppHeader : require('./layout/side-nav'),
+  AppHeader : require('./layout/app-header'),
   TopNav : require('./layout/top-nav'),
   SideNav : require('./layout/side-nav'),
 
