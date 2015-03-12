@@ -1,5 +1,4 @@
 /* global document */
-'use strict';
 
 import React from 'react';
 import router from './router';
