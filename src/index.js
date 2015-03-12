@@ -14,7 +14,7 @@ export default {
 
   Modal : require('./modal'),
 
-  Collapsible : require('./collapsible'),
+  Collapsible: require("./collapsible/collapsible"),
 
   // Utilities
   LayeredComponentMixin : require('./mixins/layered-component'),
