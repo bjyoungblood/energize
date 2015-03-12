@@ -65,6 +65,10 @@ header {
 .app-content {
   margin-left: 240px;
 
+  &.no-margin {
+    margin-left : 0;
+  }
+
   @media #{$medium-and-down} {
     margin-left : 0;
   }

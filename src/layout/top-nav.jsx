@@ -8,8 +8,11 @@ import Container from '../container';
 const TopNav = React.createClass({
 
   render() {
+
+    let classes = cx('top-nav', this.props.className);
+
     return (
-      <nav className="top-nav">
+      <nav {...this.props} className={classes}>
         <Container>
           <div className="nav-wrapper">
             {this.props.children}
