@@ -16,6 +16,9 @@ module.exports = {
 
   Collapsible : require('./collapsible/collapsible'),
 
+  // Forms
+  InputWrapper : require('./forms/input-wrapper'),
+
   // Utilities
   LayeredComponentMixin : require('./mixins/layered-component'),
   TransitionIn : require('./transition-in'),
