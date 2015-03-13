@@ -1,0 +1,15 @@
+---
+linters:
+  LeadingZero:
+    enabled: true
+    style: include_zero
+  PropertySortOrder:
+    enabled: true
+    separate_groups: true
+  SpaceAfterPropertyColon:
+    style: at_least_one_space
+  SpaceAfterPropertyName:
+    enabled: false
+  StringQuotes:
+    enabled: true
+    style: double_quotes
