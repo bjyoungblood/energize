@@ -9,8 +9,6 @@ import SideNavItem from 'src/layout/side-nav/item';
 import Collapsible from 'src/collapsible/collapsible';
 import CollapsibleSection from 'src/collapsible/section';
 import Modal from 'src/modal';
-import IconButton from 'src/icon-button';
-import Container from 'src/container';
 import Row from 'src/row';
 import Col from 'src/col';
 import Table from 'src/table';
