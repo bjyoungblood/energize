@@ -27,10 +27,6 @@ import Col from './col';
  */
 const AutoCols = React.createClass({
   propTypes : {
-    children : React.PropTypes.arrayOf(
-      React.PropTypes.element.isRequired
-    ).isRequired,
-
     sm : React.PropTypes.number,
     md : React.PropTypes.number,
     lg : React.PropTypes.number,
