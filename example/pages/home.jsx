@@ -11,8 +11,10 @@ import CollapsibleSection from 'src/collapsible/section';
 import Modal from 'src/modal';
 import Row from 'src/row';
 import Col from 'src/col';
+import AutoCols from 'src/auto-cols';
 import Table from 'src/table';
 import Card from 'src/card';
+import Waves from 'src/waves';
 
 const HomePage = React.createClass({
 
@@ -59,28 +61,45 @@ const HomePage = React.createClass({
 
               <Collapsible>
 
-                <CollapsibleSection header="Header!"
+                <CollapsibleSection header="Waves!"
                                     open={this.state.collapsed}
                                     onToggle={this.onCollapseToggle}>
                   <ul>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
-                    <SideNavItem>
-                      <a>Collapse child!</a>
-                    </SideNavItem>
+                    <Waves>
+                      <SideNavItem>
+                        <a>Plain</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="orange">
+                      <SideNavItem>
+                        <a>Orange</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="red">
+                      <SideNavItem>
+                        <a>Red</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="yellow">
+                      <SideNavItem>
+                        <a>Yellow</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="purple">
+                      <SideNavItem>
+                        <a>Purple</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="green">
+                      <SideNavItem>
+                        <a>Green</a>
+                      </SideNavItem>
+                    </Waves>
+                    <Waves color="teal">
+                      <SideNavItem>
+                        <a>Teal</a>
+                      </SideNavItem>
+                    </Waves>
                   </ul>
                 </CollapsibleSection>
 
@@ -109,7 +128,22 @@ const HomePage = React.createClass({
               <a onClick={this.toggleModal}>MODAL!</a>
             </Col>
             <Col sm={12} md={8} lg={9}>m9</Col>
-
+          </Row>
+          <Row>
+            <AutoCols md={3}>
+              <Waves>
+                <button className="btn btn-large">
+                  Waves!
+                </button>
+              </Waves>
+              <Waves color="blue">
+                <button className="btn btn-large">
+                  Waves!
+                </button>
+              </Waves>
+            </AutoCols>
+          </Row>
+          <Row>
             <Col sm={12} md={8} lg={9}>
               <Card title="This is a test">
                 <p>Card contents goes here</p>

@@ -3,4 +3,16 @@ $roboto-font-path: "../../node_modules/materialize-css/font/roboto/";
 $icons-font-path: "../../node_modules/materialize-css/font/material-design-icons/";
 
 @import "../../node_modules/materialize-css/sass/materialize";
-@import "../../sass/energize.scss";
+
+// include these here so that webpack will watch them (won't work if just
+// importing sass/energize.scss)
+@import "../../sass/components/variables";
+@import "../../sass/components/colors";
+
+@import "../../sass/components/collapsible";
+@import "../../sass/components/layout";
+@import "../../sass/components/modal";
+@import "../../sass/components/overlay";
+@import "../../sass/components/side-nav";
+@import "../../sass/components/typography";
+@import "../../sass/components/waves";
