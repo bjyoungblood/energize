@@ -14,6 +14,7 @@ import Container from 'src/container';
 import Row from 'src/row';
 import Col from 'src/col';
 import Table from 'src/table';
+import Card from 'src/card';
 
 const HomePage = React.createClass({
 
@@ -110,6 +111,12 @@ const HomePage = React.createClass({
               <a onClick={this.toggleModal}>MODAL!</a>
             </Col>
             <Col sm={12} md={8} lg={9}>m9</Col>
+
+            <Col sm={12} md={8} lg={9}>
+              <Card title="This is a test">
+                <p>Card contents goes here</p>
+              </Card>
+            </Col>
           </Row>
 
           <Row>
