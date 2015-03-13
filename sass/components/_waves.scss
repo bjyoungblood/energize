@@ -1,0 +1,45 @@
+li {
+  &.waves-effect {
+    display : list-item;
+  }
+}
+
+.waves-effect {
+
+  .waves-ripple {
+    @include transform(scale(3));
+    opacity : 0.45;
+  }
+
+  &.waves-dark-blue .waves-ripple {
+    background-color : rgba(68, 77, 88, 0.8);
+  }
+
+}
+
+.waves-ripple {
+  @include transition(all 0.7s $ease-in-quart);
+  @include transform(scale(3));
+  opacity  : 0.45;
+  position : absolute;
+  z-index  : 2;
+
+  &.waves-ripple-enter {
+    @include transform(scale(0));
+    will-change : transform;
+
+    &.waves-ripple-enter-active {
+      @include transform(scale(3));
+    }
+  }
+
+  &.waves-ripple-leave {
+    opacity     : 0.45;
+    will-change : opacity;
+
+    &.waves-ripple-leave-active {
+      @include transition(all 1s $ease-out-quart);
+      opacity : 0;
+    }
+  }
+}
