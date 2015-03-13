@@ -45,31 +45,25 @@ module.exports = {
     modulesDirectories : [ 'node_modules' ],
     extensions : [ '', '.js', '.jsx' ],
   },
-  node : {
-    // don't try to load these modules
-    net : 'empty',
-    tls : 'empty',
-    dns : 'empty',
-  },
   module : {
     noParse : /\.min\.js/,
     loaders : [
       {
         test : /\.jsx|js$/,
         exclude : /node_modules/,
-        loaders : [ 'react-hot', 'babel-loader' ]
+        loaders : [ 'react-hot', 'babel' ]
       },
       {
         test : /\.json$/,
-        loader : 'json-loader'
+        loader : 'json'
       },
       {
         test : /\.css$/,
-        loader : 'css-loader'
+        loader : 'css'
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
+        loader: 'style!css!sass'
       },
       {
         test : /\.png$/,
