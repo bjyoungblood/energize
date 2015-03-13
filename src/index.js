@@ -17,6 +17,8 @@ module.exports = {
 
   Collapsible : require('./collapsible/collapsible'),
 
+  Card : require('./card'),
+
   // Forms
   InputWrapper : require('./forms/input-wrapper'),
 
