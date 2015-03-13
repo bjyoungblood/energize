@@ -26,8 +26,8 @@ const InputWrapper = React.createClass({
     let child = React.Children.only(this.props.children);
 
     return {
-      value : child.props.value,
-      focused : !! child.props.value,
+      value : child.props.value || child.props.defaultValue,
+      focused : !! (child.props.value || child.props.defaultValue),
     };
   },
 
