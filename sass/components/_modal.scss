@@ -1,4 +1,3 @@
-
 .modal {
   display : block;
 
@@ -7,25 +6,23 @@
   }
 
   &.modal-fade-enter {
-    opacity : 0.1;
+    @include transition(all 0.5s $ease-in-quart);
+    opacity   : 0.1;
     transform : translateY(-100px);
 
-    @include transition(all 0.5s $ease-in-quart);
-
     &.modal-fade-enter-active {
-      opacity : 1;
+      opacity   : 1;
       transform : translateY(0);
     }
   }
 
   &.modal-fade-leave {
-    opacity : 1;
+    @include transition(all 0.2s $ease-out-quart);
+    opacity   : 1;
     transform : translateY(0);
 
-    @include transition(all 0.2s $ease-out-quart);
-
     &.modal-fade-leave-active {
-      opacity : 0;
+      opacity   : 0;
       transform : translateY(-100px);
     }
   }

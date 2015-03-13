@@ -1,25 +1,19 @@
 .overlay {
-
-  display : block;
-
-  position : fixed;
-  top : 0;
-  left : 0;
-  bottom : 0;
-  right : 0;
-
-  background : #000;
-
+  background  : $black;
+  bottom      : 0;
+  display     : block;
+  height      : 115%;
+  left        : 0;
+  opacity     : 0.45;
+  position    : fixed;
+  right       : 0;
+  top         : 0;
+  width       : 100%;
   will-change : opacity;
 
-  height : 115%;
-  width : 100%;
-  opacity : 0.45;
-
   &.overlay-fade-enter {
-    opacity : 0.1;
-
     @include transition(opacity 0.5s $ease-in-quart);
+    opacity : 0.1;
 
     &.overlay-fade-enter-active {
       opacity : 0.45;
@@ -27,13 +21,11 @@
   }
 
   &.overlay-fade-leave {
-    opacity : 1;
-
     @include transition(opacity 0.2s $ease-out-quart);
+    opacity : 1;
 
     &.overlay-fade-leave-active {
       opacity : 0;
     }
   }
 }
-

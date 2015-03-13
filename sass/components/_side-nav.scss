@@ -1,48 +1,22 @@
-ul.side-nav {
-
+.side-nav {
   overflow-y : scroll;
 
   &.fixed {
     @include transition(all 0.6s $ease-in-quart);
 
     &.open {
-
       @media #{$medium-and-down} {
         left : 0;
       }
-
     }
   }
 
   li {
-
     line-height : $side-nav-line-height;
-    padding : 0 1rem;
+    padding     : 0 1rem;
 
     &.bold {
       font-weight : 500;
-    }
-
-    &.logo-wrapper {
-
-      @extend .valign-wrapper;
-
-      height : $top-nav-height;
-      margin-bottom : 1rem;
-
-      border-bottom: 1px solid #ddd;
-
-      &:hover {
-        background-color : transparent;
-      }
-
-      .logo {
-        @extend .valign;
-
-        font-size : 150%;
-        margin : 0 auto;
-      }
-
     }
 
     .collapsible-header {
@@ -52,10 +26,32 @@ ul.side-nav {
     a {
       cursor : pointer;
     }
-
   }
 
+  .logo-wrapper {
+    // scss-lint:disable PlaceholderInExtend
+    @extend .valign-wrapper;
+    // scss-lint:enable PlaceholderInExtend
+
+    border-bottom : 1px solid $side-nav-logo-border;
+    height        : $top-nav-height;
+    margin-bottom : 1rem;
+
+    &:hover {
+      background-color : transparent;
+    }
+
+    .logo {
+      // scss-lint:disable PlaceholderInExtend
+      @extend .valign;
+      // scss-lint:enable PlaceholderInExtend
+
+      font-size : 150%;
+      margin    : 0 auto;
+    }
+  }
 }
+
 
 .overlay {
   &.side-nav-overlay {
