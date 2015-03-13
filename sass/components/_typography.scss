@@ -1,0 +1,10 @@
+.page-title {
+  color       : $off-white;
+  font-size   : $top-nav-font-size;
+  line-height : $top-nav-height;
+
+  @media #{$medium-and-down} {
+    font-size   : $top-nav-mobile-font-size;
+    line-height : $top-nav-mobile-height;
+  }
+}

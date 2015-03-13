@@ -1,0 +1,8 @@
+$black     : #000 !default;
+$white     : #fff !default;
+$off-black : rgba(0, 0, 0, 0.87) !default;
+$off-white : rgba(255, 255, 255, 0.87) !default;
+
+// scss-lint:disable ColorVariable
+$side-nav-logo-border : color("grey", "lighten-1") !default;
+// scss-lint:enable ColorVariable
