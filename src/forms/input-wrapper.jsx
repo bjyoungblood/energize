@@ -23,8 +23,11 @@ const InputWrapper = React.createClass({
   },
 
   getInitialState() {
+    let child = React.Children.only(this.props.children);
+
     return {
-      focused : false,
+      value : child.props.value,
+      focused : !! child.props.value,
     };
   },
 
@@ -45,9 +48,21 @@ const InputWrapper = React.createClass({
     this.setState({ focused : false });
   },
 
-  labelClasses() {
+  onChange(oldHandler, event) {
+    this.setState({ value : event.currentTarget.value });
+
+    if (oldHandler) {
+      oldHandler(event);
+    }
+  },
+
+  labelClasses(inputType) {
+    if (inputType === 'date') {
+      return cx(this.props.labelClassName, 'active');
+    }
+
     return cx(this.props.labelClassName, {
-      active : this.state.focused,
+      active : this.state.focused || !! this.state.value,
     });
   },
 
@@ -71,12 +86,21 @@ const InputWrapper = React.createClass({
       labelFor = newProps.id;
     }
 
+    if (child.props.onChange) {
+      newProps.onChange = this.onChange.bind(this, child.props.onChange);
+    } else {
+      newProps.onChange = this.onChange.bind(this, null);
+    }
+
     let newChild = cloneWithProps(child, newProps);
 
     return (
       <div className={this.wrapperClasses()}>
         {newChild}
-        <label htmlFor={labelFor} className={this.labelClasses()}>{this.props.label}</label>
+        <label htmlFor={labelFor}
+               className={this.labelClasses(child.props.type)}>
+          {this.props.label}
+        </label>
       </div>
     );
   }
