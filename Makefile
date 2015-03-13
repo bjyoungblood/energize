@@ -5,7 +5,7 @@ DEVSERVER = node_modules/webpack-dev-server/bin/webpack-dev-server.js
 
 export NODE_ENV = test
 
-.PHONY: build clean dev dist lint
+.PHONY: build clean dev dist lint lint-js lint-sass
 
 build:
 	$(WEBPACK) --optimize-minimize --optimize-occurence-order --devtool source-map --verbose --display-chunks --bail
@@ -19,6 +19,10 @@ dist: clean
 dev:
 	NODE_ENV=development $(DEVSERVER) --content-base dist/ --hot --devtool eval-source-map --progress --colors --debug --output-pathinfo
 
-lint:
+lint: lint-js lint-sass
+
+lint-js:
 	$(ESLINT) -c .eslintrc --ext .js --ext .jsx .
 
+lint-sass:
+	scss-lint sass
