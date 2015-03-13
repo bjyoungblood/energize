@@ -19,6 +19,8 @@ module.exports = {
 
   Card : require('./card'),
 
+  Waves : rqeuire('./waves'),
+
   // Forms
   InputWrapper : require('./forms/input-wrapper'),
 
