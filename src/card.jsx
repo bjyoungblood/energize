@@ -20,7 +20,7 @@ const Card = React.createClass({
     }
 
     return (
-      <span className="card-title">
+      <span className={'card-title ' + this.props.contentTheme}>
         {this.props.title}
       </span>
     );
