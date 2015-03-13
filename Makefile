@@ -20,5 +20,5 @@ dev:
 	NODE_ENV=development $(DEVSERVER) --content-base dist/ --hot --devtool eval-source-map --progress --colors --debug --output-pathinfo
 
 lint:
-	$(ESLINT) -c .eslintrc *.js src/** example/**
+	$(ESLINT) -c .eslintrc --ext .js --ext .jsx .
 
