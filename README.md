@@ -4,27 +4,11 @@ React components (plus some styles) for Materialize CSS
 
 ## Style Guide
 
+### JavaScript
+
 - Use ES6 features wherever possible, but avoid anything that requires `es6-shim` (`Map`, `Set`)
-
-### Class names
-
-```javascript
-import cx from 'classnames';
-
-const SpecialDiv = React.createClass({
-  render() {
-    // any classes we want to apply should come last so they override anything
-    // set in this.props.className
-    let classes = cx(this.props.className, 'top-nav');
-
-    return (
-      <div className={classes}>
-        {this.props.children}
-      </div>
-    );
-  }
-});
-```
+- No jQuery or other large external dependencies
+- No direct DOM manipulation
 
 ### Component State
 
@@ -44,3 +28,29 @@ events.
 If a `value` prop (or whatever is appropriate for the component) is provided, then
 the component should defer to the given value instead of using its internal state.
 When a `value` prop is not provided, the component should track state internally.
+
+### Sass
+
+- Align property values on adjacent lines
+- Use [`scss-lint`](https://github.com/causes/scss-lint)
+- Avoid changing Materialize styles wherever possible in order to maintain forward-compatibility
+
+#### Class names
+
+```javascript
+import cx from 'classnames';
+
+const SpecialDiv = React.createClass({
+  render() {
+    // any classes we want to apply should come last so they override anything
+    // set in this.props.className
+    let classes = cx(this.props.className, 'top-nav');
+
+    return (
+      <div className={classes}>
+        {this.props.children}
+      </div>
+    );
+  }
+});
+```
