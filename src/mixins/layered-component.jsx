@@ -1,3 +1,4 @@
+/* global document */
 /*
  * Adapted from Khan Academy's react-components
  *
@@ -23,21 +24,21 @@ const LayeredComponentMixin = {
     // Appending to the body is easier than managing the z-index of
     // everything on the page.  It's also better for accessibility and
     // makes stacking a snap (since components will stack in mount order).
-    this._layer = document.createElement('div');
-    document.body.appendChild(this._layer);
-    this._renderLayer();
+    this.layer = document.createElement('div');
+    document.body.appendChild(this.layer);
+    this.mountLayer();
   },
 
   componentDidUpdate() {
-    this._renderLayer();
+    this.mountLayer();
   },
 
   componentWillUnmount() {
-    this._unrenderLayer();
-    document.body.removeChild(this._layer);
+    this.unmountLayer();
+    document.body.removeChild(this.layer);
   },
 
-  _renderLayer() {
+  mountLayer() {
     // By calling this method in componentDidMount() and
     // componentDidUpdate(), you're effectively creating a "wormhole" that
     // funnels React's hierarchical updates through to a DOM node on an
@@ -49,22 +50,22 @@ const LayeredComponentMixin = {
     // a noscript element, like React does when an element's render returns
     // null.
     if (layerElement === null) {
-      React.render(<noscript />, this._layer);
+      React.render(<noscript />, this.layer);
     } else {
-      React.render(layerElement, this._layer);
+      React.render(layerElement, this.layer);
     }
 
     if (this.layerDidMount) {
-      this.layerDidMount(this._layer);
+      this.layerDidMount(this.layer);
     }
   },
 
-  _unrenderLayer() {
+  unmountLayer() {
     if (this.layerWillUnmount) {
-      this.layerWillUnmount(this._layer);
+      this.layerWillUnmount(this.layer);
     }
 
-    React.unmountComponentAtNode(this._layer);
+    React.unmountComponentAtNode(this.layer);
   },
 };
 
