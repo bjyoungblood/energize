@@ -3,6 +3,7 @@ module.exports = {
   Container : require('./container'),
   Row : require('./row'),
   Col : require('./col'),
+  AutoCols : require('./auto-cols'),
 
   IconButton : require('./icon-button'),
 
