@@ -5,7 +5,7 @@ const AppContainer = React.createClass({
 
   render() {
     return <Router.RouteHandler {...this.props} />;
-  }
+  },
 
 });
 

@@ -27,7 +27,7 @@ const InputWrapper = React.createClass({
 
     return {
       value : child.props.value || child.props.defaultValue,
-      focused : !! (child.props.value || child.props.defaultValue),
+      focused : Boolean(child.props.value || child.props.defaultValue),
     };
   },
 
@@ -62,12 +62,12 @@ const InputWrapper = React.createClass({
     }
 
     return cx(this.props.labelClassName, {
-      active : this.state.focused || !! this.state.value,
+      active : this.state.focused || Boolean(this.state.value),
     });
   },
 
   wrapperClasses() {
-    return cx(this.props.wrapperClassesName, 'input-field');
+    return cx(this.props.wrapperClassName, 'input-field');
   },
 
   render() {
@@ -103,7 +103,7 @@ const InputWrapper = React.createClass({
         </label>
       </div>
     );
-  }
+  },
 
 });
 

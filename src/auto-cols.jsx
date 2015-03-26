@@ -50,7 +50,7 @@ const AutoCols = React.createClass({
     });
 
     return <div>{children}</div>;
-  }
+  },
 });
 
 export default AutoCols;

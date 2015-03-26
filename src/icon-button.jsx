@@ -5,6 +5,7 @@ const IconButton = React.createClass({
 
   propTypes : {
     type : React.PropTypes.string.isRequired,
+    className : React.PropTypes.string,
   },
 
   getDefaultProps() {
@@ -15,7 +16,7 @@ const IconButton = React.createClass({
 
   render() {
 
-    let classes = cx('mdi-' + this.props.type, this.props.classNames);
+    let classes = cx('mdi-' + this.props.type, this.props.className);
 
     return (
       <i {...this.props} className={classes} />

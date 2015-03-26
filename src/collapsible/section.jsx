@@ -7,6 +7,7 @@ const CollapsibleSection = React.createClass({
     onToggle : React.PropTypes.func.isRequired,
     header : React.PropTypes.node,
     open : React.PropTypes.bool,
+    className : React.PropTypes.string,
   },
 
   getDefaultProps() {
@@ -43,7 +44,7 @@ const CollapsibleSection = React.createClass({
         {children}
       </li>
     );
-  }
+  },
 });
 
 export default CollapsibleSection;

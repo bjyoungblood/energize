@@ -2,6 +2,11 @@ import React from 'react';
 import cx from 'classnames';
 
 const Row = React.createClass({
+
+  propTypes : {
+    className : React.PropTypes.string,
+  },
+
   render() {
     let classes = cx('row', this.props.className);
 
@@ -11,6 +16,7 @@ const Row = React.createClass({
       </div>
     );
   },
+
 });
 
 export default Row;

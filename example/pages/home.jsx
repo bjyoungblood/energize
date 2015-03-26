@@ -35,7 +35,6 @@ const HomePage = React.createClass({
   },
 
   sideNavToggle() {
-    console.log(this.state);
     this.setState({ open : ! this.state.open });
   },
 
@@ -188,7 +187,7 @@ const HomePage = React.createClass({
         </div>
       </div>
     );
-  }
+  },
 });
 
 export default HomePage;

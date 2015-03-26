@@ -61,9 +61,11 @@ const WaveMaker = React.createClass({
 
     let ripple;
     if (this.state.active) {
-      ripple = <div key={this.state.clickCount}
-                    className="waves-ripple"
-                    style={this.getRippleStyle()} />;
+      ripple = (
+        <div key={this.state.clickCount}
+             className="waves-ripple"
+             style={this.getRippleStyle()} />
+      );
     }
 
     return (
@@ -75,7 +77,9 @@ const WaveMaker = React.createClass({
 
   componentDidMount() {
     if (this.state.initialRender) {
+      /* eslint-disable react/no-did-mount-set-state */
       this.setState({ initialRender : false });
+      /* eslint-enable react/no-did-mount-set-state */
     }
   },
 
@@ -98,7 +102,7 @@ const WaveMaker = React.createClass({
     }
 
     this.setState({
-      active : false
+      active : false,
     });
   },
 
@@ -114,7 +118,7 @@ const WaveMaker = React.createClass({
       children : [
         child.props.children,
         this.renderRipple(child),
-      ]
+      ],
     });
 
     return newChild;

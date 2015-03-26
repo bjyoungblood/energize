@@ -15,34 +15,34 @@ import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
  */
 const ReactCSSTransitionGroupAppear = React.createClass({
 
-  propTypes: {
+  propTypes : {
     transitionName : React.PropTypes.string.isRequired,
     transitionEnter : React.PropTypes.bool,
     transitionLeave : React.PropTypes.bool,
-    transitionAppear : React.PropTypes.bool
+    transitionAppear : React.PropTypes.bool,
   },
 
-  getInitialState: function() {
+  getInitialState() {
     return {
-      mounted : false
+      mounted : false,
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       transitionEnter : true,
       transitionLeave : true,
-      transitionAppear : true
+      transitionAppear : true,
     };
   },
 
-  componentDidMount: function() {
-    this.setState({
-      mounted : true
-    });
+  componentDidMount() {
+    /* eslint-disable react/no-did-mount-set-state */
+    this.setState({ mounted : true });
+    /* eslint-enable react/no-did-mount-set-state */
   },
 
-  render: function() {
+  render() {
 
     let children;
 
@@ -62,7 +62,7 @@ const ReactCSSTransitionGroupAppear = React.createClass({
         {children}
       </ReactCSSTransitionGroup>
     );
-  }
+  },
 });
 
 export default ReactCSSTransitionGroupAppear;

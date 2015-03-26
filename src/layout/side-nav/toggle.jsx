@@ -8,6 +8,7 @@ const SideNavToggle = React.createClass({
 
   propTypes : {
     onClick : React.PropTypes.func,
+    className : React.PropTypes.string,
   },
 
   render() {

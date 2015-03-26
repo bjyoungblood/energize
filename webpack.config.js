@@ -51,51 +51,51 @@ module.exports = {
       {
         test : /\.jsx|js$/,
         exclude : /node_modules/,
-        loaders : [ 'react-hot', 'babel' ]
+        loaders : [ 'react-hot', 'babel' ],
       },
       {
         test : /\.json$/,
-        loader : 'json'
+        loader : 'json',
       },
       {
         test : /\.css$/,
-        loader : 'css'
+        loader : 'css',
       },
       {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
+        test : /\.scss$/,
+        loader : 'style!css!sass',
       },
       {
         test : /\.png$/,
-        loader : 'file?mimetype=image/png&name=images/[hash].[ext]'
+        loader : 'file?mimetype=image/png&name=images/[hash].[ext]',
       },
       {
         test : /\.gif$/,
-        loader : 'file?mimetype=image/png&name=images/[hash].[ext]'
+        loader : 'file?mimetype=image/png&name=images/[hash].[ext]',
       },
       {
         test : /\.jpg$/,
-        loader : 'file?mimetype=image/jpg&name=images/[hash].[ext]'
+        loader : 'file?mimetype=image/jpg&name=images/[hash].[ext]',
       },
       {
         test : /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader : 'url?mimetype=application/font-woff&name=assets/[hash].[ext]'
+        loader : 'url?mimetype=application/font-woff&name=assets/[hash].[ext]',
       },
       {
         test : /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        loader : 'url?mimetype=application/font-woff&name=assets/[hash].[ext]'
+        loader : 'url?mimetype=application/font-woff&name=assets/[hash].[ext]',
       },
       {
         test : /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader : 'url?mimetype=application/octet-stream&name=assets/[hash].[ext]'
+        loader : 'url?mimetype=application/octet-stream&name=assets/[hash].[ext]',
       },
       {
         test : /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-        loader : 'file?mimetype=application/vnd.ms-fontobject&name=assets/[hash].[ext]'
+        loader : 'file?mimetype=application/vnd.ms-fontobject&name=assets/[hash].[ext]',
       },
       {
         test : /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader : 'url?mimetype=image/svg+xml&name=images/[hash].[ext]'
+        loader : 'url?mimetype=image/svg+xml&name=images/[hash].[ext]',
       },
     ],
   },

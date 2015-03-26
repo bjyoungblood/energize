@@ -15,11 +15,12 @@ const SideNav = React.createClass({
   propTypes : {
     onDismiss : React.PropTypes.func.isRequired,
     open : React.PropTypes.bool,
+    className : React.PropTypes.string,
   },
 
   getDefaultProps() {
     return {
-      open : false
+      open : false,
     };
   },
 

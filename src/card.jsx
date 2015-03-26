@@ -36,7 +36,7 @@ const Card = React.createClass({
         </div>
       </div>
     );
-  }
+  },
 });
 
 export default Card;

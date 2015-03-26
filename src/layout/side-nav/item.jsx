@@ -7,6 +7,7 @@ const SideNavItem = React.createClass({
     bold : React.PropTypes.bool,
     active : React.PropTypes.bool,
     hasChildren : React.PropTypes.bool,
+    className : React.PropTypes.string,
   },
 
   getDefaultProps() {

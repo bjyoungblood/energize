@@ -1,6 +1,3 @@
-/*eslint no-unused-vars:0,no-undef:0*/
-// https://github.com/eslint/eslint/issues/1978
-
 import React from 'react';
 import { Route } from 'react-router';
 

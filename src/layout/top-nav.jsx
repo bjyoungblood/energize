@@ -5,6 +5,10 @@ import Container from '../container';
 
 const TopNav = React.createClass({
 
+  propTypes : {
+    className : React.PropTypes.string,
+  },
+
   render() {
 
     let classes = cx('top-nav', this.props.className);

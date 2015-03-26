@@ -10,12 +10,13 @@ let Modal = React.createClass({
 
   propTypes : {
     onBackgroundClick : React.PropTypes.func.isRequired,
+    className : React.PropTypes.string,
     visible : React.PropTypes.bool,
   },
 
   getDefaultProps() {
     return {
-      visible : false
+      visible : false,
     };
   },
 

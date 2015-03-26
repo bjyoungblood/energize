@@ -3,6 +3,11 @@ import cx from 'classnames';
 
 const Header = React.createClass({
 
+  propTypes : {
+    fixedNav : React.PropTypes.bool,
+    className : React.PropTypes.string,
+  },
+
   getDefaultProps() {
     return {
       fixedNav : false,

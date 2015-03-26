@@ -3,6 +3,10 @@ import cx from 'classnames';
 
 const SideNavLogo = React.createClass({
 
+  propTypes : {
+    className : React.PropTypes.string,
+  },
+
   render() {
     let classes = cx(this.props.className, 'logo-wrapper');
 

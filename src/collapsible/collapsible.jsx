@@ -5,10 +5,8 @@ import Section from './section';
 
 const Collapsible = React.createClass({
 
-  getDefaultProps() {
-    return {
-      accordion : false,
-    };
+  propTypes : {
+    className : React.PropTypes.string,
   },
 
   render() {
