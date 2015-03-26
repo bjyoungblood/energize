@@ -15,11 +15,7 @@ const TopNav = React.createClass({
 
     return (
       <nav {...this.props} className={classes}>
-        <Container>
-          <div className="nav-wrapper">
-            {this.props.children}
-          </div>
-        </Container>
+        {this.props.children}
       </nav>
     );
   },

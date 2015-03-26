@@ -2,17 +2,26 @@
 
   .top-nav {
     @include box-shadow(none);
+    align-items : center;
+    display : flex;
+    flex-wrap : nowrap;
     height : $top-nav-height;
+    justify-content : space-between;
+    padding : 0 1em;
+    width : 100%;
+
+    &.centered {
+      justify-content : center;
+    }
+
+    .user-menu {
+      text-align : right;
+      width : 100%;
+    }
 
     @media #{$medium-and-down} {
       height     : $top-nav-mobile-height;
       text-align : center;
-    }
-
-    .nav-wrapper {
-      @media #{$medium-and-down} {
-        text-align : center;
-      }
     }
   }
 

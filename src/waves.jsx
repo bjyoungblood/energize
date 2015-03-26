@@ -1,7 +1,6 @@
 /* global window */
 import React from 'react';
 import cx from 'classnames';
-import cloneWithProps from 'react/lib/cloneWithProps';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 
 function offset(el) {
@@ -36,6 +35,10 @@ const WaveMaker = React.createClass({
   },
 
   getRippleStyle() {
+    if (! this.isMounted()) {
+      return {};
+    }
+
     let el = this.getDOMNode();
     let elOffset = offset(el);
 
@@ -109,9 +112,9 @@ const WaveMaker = React.createClass({
   render() {
     let child = React.Children.only(this.props.children);
 
-    let classes = cx('waves-effect', 'waves-' + this.props.color);
+    let classes = cx(child.props.className, 'waves-effect', 'waves-' + this.props.color);
 
-    let newChild = cloneWithProps(child, {
+    return React.cloneElement(child, {
       className : classes,
       onMouseDown : this.onMouseDown.bind(this, child.props.onMouseDown),
       onMouseUp : this.onMouseUp.bind(this, child.props.onMouseUp),
@@ -120,8 +123,6 @@ const WaveMaker = React.createClass({
         this.renderRipple(child),
       ],
     });
-
-    return newChild;
   },
 
 });
