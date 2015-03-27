@@ -1,5 +1,7 @@
 module.exports = {
 
+  Alert : require('./alert'),
+
   Container : require('./container'),
   Row : require('./row'),
   Col : require('./col'),
