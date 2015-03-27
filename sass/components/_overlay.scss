@@ -22,7 +22,7 @@
 
   &.overlay-fade-leave {
     @include transition(opacity 0.2s $ease-out-quart);
-    opacity : 1;
+    opacity : 0.45;
 
     &.overlay-fade-leave-active {
       opacity : 0;
