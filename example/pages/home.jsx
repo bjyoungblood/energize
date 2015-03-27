@@ -46,9 +46,10 @@ const HomePage = React.createClass({
 
           <AppHeader fixedNav={true}>
             <TopNav>
+              <SideNavToggle onClick={this.sideNavToggle} />
               <a className="page-title">Page Title</a>
+              <div className="user-menu">Hello, User! (logout)</div>
             </TopNav>
-            <SideNavToggle onClick={this.sideNavToggle} />
             <SideNav open={this.state.open} onDismiss={this.sideNavToggle}>
               <SideNavLogo>asdf</SideNavLogo>
               <SideNavItem bold={true} active={true}>

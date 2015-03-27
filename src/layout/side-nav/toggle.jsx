@@ -12,14 +12,12 @@ const SideNavToggle = React.createClass({
   },
 
   render() {
-    let classes = cx(this.props.className, 'button-collapse', 'top-nav', 'full');
+    let classes = cx(this.props.className, 'button-collapse');
 
     return (
-      <Container>
-        <a className={classes} onClick={this.props.onClick}>
-          <IconButton type="navigation-menu" />
-        </a>
-      </Container>
+      <a className={classes} onClick={this.props.onClick}>
+        <IconButton type="navigation-menu" />
+      </a>
     );
   },
 
