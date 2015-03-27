@@ -5,6 +5,7 @@
     @include transition(all 0.6s $ease-in-quart);
 
     &.open {
+      z-index : 1000;
       @media #{$medium-and-down} {
         left : 0;
       }

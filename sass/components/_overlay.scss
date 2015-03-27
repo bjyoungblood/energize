@@ -10,6 +10,7 @@
   top         : 0;
   width       : 100%;
   will-change : opacity;
+  z-index     : 999;
 
   &.overlay-fade-enter {
     @include transition(opacity 0.5s $ease-in-quart);
