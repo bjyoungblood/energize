@@ -112,17 +112,13 @@ const WaveMaker = React.createClass({
   render() {
     let child = React.Children.only(this.props.children);
 
-    let classes = cx(child.props.className, 'waves-effect', 'waves-' + this.props.color);
-
-    return React.cloneElement(child, {
-      className : classes,
+    let props = {
+      className : cx(child.props.className, 'waves-effect', 'waves-' + this.props.color),
       onMouseDown : this.onMouseDown.bind(this, child.props.onMouseDown),
       onMouseUp : this.onMouseUp.bind(this, child.props.onMouseUp),
-      children : [
-        child.props.children,
-        this.renderRipple(child),
-      ],
-    });
+    };
+
+    return React.cloneElement(child, props, [child.props.children, this.renderRipple(child)]);
   },
 
 });
