@@ -1,0 +1,22 @@
+ul.tabs {
+
+  display         : flex;
+  flex-wrap       : nowrap;
+  justify-content : space-around;
+  overflow        : hidden;
+
+  li.tab {
+
+    background-color : transparent;
+    flex             : 1 1 auto;
+    overflow         : visible;
+    width            : auto;
+    z-index          : 1;
+
+    &.active {
+      z-index: 2;
+    }
+
+  }
+
+}

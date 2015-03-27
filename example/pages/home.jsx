@@ -153,6 +153,28 @@ const HomePage = React.createClass({
 
           <Row>
             <Col md={12}>
+              <ul className="tabs teal darken-1 z-depth-1">
+                <Waves>
+                  <li className="tab active">Waves Tab!</li>
+                </Waves>
+                <Waves>
+                  <li className="tab">This Is A Stupidly</li>
+                </Waves>
+                <Waves>
+                  <li className="tab">Waves Tab!</li>
+                </Waves>
+                <Waves>
+                  <li className="tab">Waves Tab!</li>
+                </Waves>
+                <Waves>
+                  <li className="tab">Waves Tab!</li>
+                </Waves>
+              </ul>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col md={12}>
               <Table bordered>
                 <thead>
                   <tr>
