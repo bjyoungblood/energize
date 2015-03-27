@@ -5,7 +5,9 @@
  */
 
 import React from 'react';
+import ReactTransitionGroup from 'react/lib/ReactTransitionGroup';
 import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
+import ReactCSSTransitionGroupChild from 'react/lib/ReactCSSTransitionGroupChild';
 
 /*
  * ReactCSSTransitionGroup won't transition its children if they are present
@@ -17,52 +19,44 @@ const ReactCSSTransitionGroupAppear = React.createClass({
 
   propTypes : {
     transitionName : React.PropTypes.string.isRequired,
+    transitionAppear : React.PropTypes.bool,
     transitionEnter : React.PropTypes.bool,
     transitionLeave : React.PropTypes.bool,
-    transitionAppear : React.PropTypes.bool,
-  },
-
-  getInitialState() {
-    return {
-      mounted : false,
-    };
+    component : React.PropTypes.string,
   },
 
   getDefaultProps() {
     return {
+      transitionAppear : true,
       transitionEnter : true,
       transitionLeave : true,
-      transitionAppear : true,
+      component : 'span',
     };
   },
 
-  componentDidMount() {
-    /* eslint-disable react/no-did-mount-set-state */
-    this.setState({ mounted : true });
-    /* eslint-enable react/no-did-mount-set-state */
+  wrapChild(child) {
+    /* eslint-disable new-cap */
+    return React.createElement(ReactCSSTransitionGroupChild, {
+      name : this.props.transitionName,
+      appear : this.props.transitionAppear,
+      enter : this.props.transitionEnter,
+      leave : this.props.transitionLeave,
+    }, child);
+    /* eslint-enable new-cap */
   },
 
   render() {
 
-    let children;
-
-    if (! this.props.transitionAppear) {
-      // if there is no appear transition, render the children now
-      children = this.props.children;
-    } else if (this.state.mounted) {
-      // if we have already mounted, it's okay to render the children
-      children = this.props.children;
-    }
-
     return (
-      <ReactCSSTransitionGroup
-        transitionName={this.props.transitionName}
-        transitionEnter={this.props.transitionEnter}
-        transitionLeave={this.props.transitionLeave}>
-        {children}
-      </ReactCSSTransitionGroup>
+      <ReactTransitionGroup
+        {...this.props}
+        childFactory={this.wrapChild}
+        component={this.props.component}
+      />
     );
+
   },
+
 });
 
 export default ReactCSSTransitionGroupAppear;
