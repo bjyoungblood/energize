@@ -1,0 +1,49 @@
+.top-nav {
+  @include box-shadow(none);
+  align-items : center;
+  display : flex;
+  flex-wrap : nowrap;
+  height : $top-nav-height;
+  justify-content : flex-start;
+  padding : 0 1rem;
+  width : 100%;
+
+  &.centered {
+    justify-content : center;
+  }
+
+  .page-title {
+    flex : 0 0 auto;
+
+    @media #{$small-and-down} {
+      flex-grow : 1;
+    }
+  }
+
+  .button-collapse {
+    color       : $off-white;
+    cursor      : pointer;
+    flex        : 1 0 0;
+    font-size   : $top-nav-font-size;
+    margin-left : 1.5rem;
+    z-index     : 2;
+
+    @media #{$small-and-down} {
+      left : 5%;
+    }
+  }
+
+  @media #{$medium-and-down} {
+    height : $top-nav-mobile-height;
+  }
+}
+
+.user-menu {
+  flex : 1 1 auto;
+  display : flex;
+  justify-content : flex-end;
+
+  @media #{$small-and-down} {
+    display : none;
+  }
+}
