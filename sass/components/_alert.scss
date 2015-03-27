@@ -1,0 +1,89 @@
+@mixin alert-variant($color) {
+  background-color : color($color, "lighten-5");
+  border           : 1px solid darken(color($color, "lighten-5"), 15%);
+  color            : desaturate(color($color, "darken-2"), 20%);
+}
+
+.alert {
+  border-radius : 2px;
+  font-weight   : 500;
+  margin        : 0.5rem;
+  padding       : 1rem;
+
+  &.alert-red {
+    @include alert-variant("red");
+  }
+
+  &.alert-pink {
+    @include alert-variant("pink");
+  }
+
+  &.alert-purple {
+    @include alert-variant("purple");
+  }
+
+  &.alert-deep-purple {
+    @include alert-variant("deep-purple");
+  }
+
+  &.alert-indigo {
+    @include alert-variant("indigo");
+  }
+
+  &.alert-blue {
+    @include alert-variant("blue");
+  }
+
+  &.alert-light-blue {
+    @include alert-variant("light-blue");
+  }
+
+  &.alert-cyan {
+    @include alert-variant("cyan");
+  }
+
+  &.alert-teal {
+    @include alert-variant("teal");
+  }
+
+  &.alert-green {
+    @include alert-variant("green");
+  }
+
+  &.alert-light-green {
+    @include alert-variant("light-green");
+  }
+
+  &.alert-lime {
+    @include alert-variant("lime");
+  }
+
+  &.alert-yellow {
+    @include alert-variant("yellow");
+  }
+
+  &.alert-amber {
+    @include alert-variant("amber");
+  }
+
+  &.alert-orange {
+    @include alert-variant("orange");
+  }
+
+  &.alert-deep-orange {
+    @include alert-variant("deep-orange");
+  }
+
+  &.alert-brown {
+    @include alert-variant("brown");
+  }
+
+  &.alert-blue-grey {
+    @include alert-variant("blue-grey");
+  }
+
+  &.alert-grey {
+    @include alert-variant("grey");
+  }
+
+}

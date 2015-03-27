@@ -8,6 +8,7 @@ import SideNavLogo from 'src/layout/side-nav/logo';
 import SideNavItem from 'src/layout/side-nav/item';
 import Collapsible from 'src/collapsible/collapsible';
 import CollapsibleSection from 'src/collapsible/section';
+import Alert from 'src/alert';
 import Modal from 'src/modal';
 import Row from 'src/row';
 import Col from 'src/col';
@@ -152,13 +153,38 @@ const HomePage = React.createClass({
           </Row>
 
           <Row>
+            <AutoCols md={12}>
+              <Alert color="red">Alert contents!</Alert>
+              <Alert color="pink">Alert contents!</Alert>
+              <Alert color="purple">Alert contents!</Alert>
+              <Alert color="deep-purple">Alert contents!</Alert>
+              <Alert color="indigo">Alert contents!</Alert>
+              <Alert color="blue">Alert contents!</Alert>
+              <Alert color="light-blue">Alert contents!</Alert>
+              <Alert color="cyan">Alert contents!</Alert>
+              <Alert color="teal">Alert contents!</Alert>
+              <Alert color="green">Alert contents!</Alert>
+              <Alert color="light-green">Alert contents!</Alert>
+              <Alert color="lime">Alert contents!</Alert>
+              <Alert color="yellow">Alert contents!</Alert>
+              <Alert color="amber">Alert contents!</Alert>
+              <Alert color="orange">Alert contents!</Alert>
+              <Alert color="deep-orange">Alert contents!</Alert>
+              <Alert color="brown">Alert contents!</Alert>
+              <Alert color="blue-grey">Alert contents!</Alert>
+              <Alert color="grey">Alert contents!</Alert>
+            </AutoCols>
+          </Row>
+
+
+          <Row>
             <Col md={12}>
               <ul className="tabs teal darken-1 z-depth-1">
                 <Waves>
                   <li className="tab active">Waves Tab!</li>
                 </Waves>
                 <Waves>
-                  <li className="tab">This Is A Stupidly</li>
+                  <li className="tab">This Is A Stupidly Wide Label</li>
                 </Waves>
                 <Waves>
                   <li className="tab">Waves Tab!</li>
