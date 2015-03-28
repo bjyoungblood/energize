@@ -23,7 +23,7 @@ const Alert = React.createClass({
     );
 
     return (
-      <div className={classes}>
+      <div {...this.props} className={classes} >
         {this.props.children}
       </div>
     );
