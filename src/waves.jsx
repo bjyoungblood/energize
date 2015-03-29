@@ -34,12 +34,7 @@ const WaveMaker = React.createClass({
     };
   },
 
-  getRippleStyle() {
-    if (! this.isMounted()) {
-      return {};
-    }
-
-    let el = this.getDOMNode();
+  getRippleStyle(el) {
     let elOffset = offset(el);
 
     let top = 0;
@@ -58,16 +53,18 @@ const WaveMaker = React.createClass({
   },
 
   renderRipple() {
-    if (this.state.initialRender) {
+    let node = this.findDOMNode();
+    if (this.state.initialRender || ! node) {
       return null;
     }
 
     let ripple;
     if (this.state.active) {
+
       ripple = (
         <div key={this.state.clickCount}
              className="waves-ripple"
-             style={this.getRippleStyle()} />
+             style={this.getRippleStyle(node)} />
       );
     }
 
