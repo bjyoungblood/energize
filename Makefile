@@ -25,4 +25,4 @@ lint-js:
 	$(ESLINT) --ext .js --ext .jsx .
 
 lint-sass:
-	scss-lint sass
+	scss-lint sass; test $$? -lt 2
