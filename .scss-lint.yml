@@ -1,11 +1,17 @@
 ---
 linters:
+  ColorVariable:
+    enabled: true
+    severity: warning
   LeadingZero:
     enabled: true
     style: include_zero
   PropertySortOrder:
     enabled: true
     separate_groups: true
+  QualifyingElement:
+    enabled: true
+    severity: warning
   SpaceAfterPropertyColon:
     style: at_least_one_space
   SpaceAfterPropertyName:
