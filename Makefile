@@ -22,7 +22,7 @@ dev:
 lint: lint-js lint-sass
 
 lint-js:
-	$(ESLINT) -c .eslintrc --ext .js --ext .jsx .
+	$(ESLINT) --ext .js --ext .jsx .
 
 lint-sass:
 	scss-lint sass
