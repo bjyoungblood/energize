@@ -53,10 +53,11 @@ const WaveMaker = React.createClass({
   },
 
   renderRipple() {
-    let node = this.findDOMNode();
-    if (this.state.initialRender || ! node) {
+    if (this.state.initialRender) {
       return null;
     }
+
+    let node = React.findDOMNode(this);
 
     let ripple;
     if (this.state.active) {
