@@ -69,7 +69,7 @@ const WaveMaker = React.createClass({
     }
 
     return (
-      <ReactCSSTransitionGroup transitionName="waves-ripple">
+      <ReactCSSTransitionGroup key="tx-group" transitionName="waves-ripple">
         {ripple}
       </ReactCSSTransitionGroup>
     );
@@ -110,6 +110,7 @@ const WaveMaker = React.createClass({
     let child = React.Children.only(this.props.children);
 
     let props = {
+      key : child.props.key || 'waves-child',
       className : cx(child.props.className, 'waves-effect', 'waves-' + this.props.color),
       onMouseDown : this.onMouseDown.bind(this, child.props.onMouseDown),
       onMouseUp : this.onMouseUp.bind(this, child.props.onMouseUp),
