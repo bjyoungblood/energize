@@ -115,7 +115,7 @@ const WaveMaker = React.createClass({
       onMouseUp : this.onMouseUp.bind(this, child.props.onMouseUp),
     };
 
-    return React.cloneElement(child, props, [child.props.children, this.renderRipple(child)]);
+    return React.cloneElement(child, props, [ child.props.children, this.renderRipple(child) ]);
   },
 
 });

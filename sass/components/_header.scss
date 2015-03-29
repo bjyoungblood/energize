@@ -39,8 +39,8 @@
 }
 
 .user-menu {
-  flex : 1 1 auto;
   display : flex;
+  flex : 1 1 auto;
   justify-content : flex-end;
 
   @media #{$small-and-down} {
