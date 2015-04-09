@@ -8,6 +8,7 @@ import SideNavLogo from 'src/layout/side-nav/logo';
 import SideNavItem from 'src/layout/side-nav/item';
 import Collapsible from 'src/collapsible/collapsible';
 import CollapsibleSection from 'src/collapsible/section';
+import InputWrapper from 'src/forms/input-wrapper';
 import Alert from 'src/alert';
 import Modal from 'src/modal';
 import Row from 'src/row';
@@ -129,6 +130,13 @@ const HomePage = React.createClass({
               <a onClick={this.toggleModal}>MODAL!</a>
             </Col>
             <Col sm={12} md={8} lg={9}>m9</Col>
+          </Row>
+          <Row>
+            <Col sm={12}>
+              <InputWrapper label="An Input!">
+                <input type="text" />
+              </InputWrapper>
+            </Col>
           </Row>
           <Row>
             <AutoCols md={3}>
