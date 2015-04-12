@@ -57,9 +57,12 @@ const InputWrapper = React.createClass({
   },
 
   labelClasses(inputType) {
-    switch(inputType) {
+    switch (inputType) {
       case 'date':
         return cx(this.props.labelClassName, 'active');
+      case 'checkbox':
+      case 'radio':
+        return cx(this.props.labelClassName);
       case '':
         return cx(this.props.labelClassName);
       default:
