@@ -57,13 +57,17 @@ const InputWrapper = React.createClass({
   },
 
   labelClasses(inputType) {
-    if (inputType === 'date') {
-      return cx(this.props.labelClassName, 'active');
+    switch(inputType) {
+      case 'date':
+        return cx(this.props.labelClassName, 'active');
+      case '':
+        return cx(this.props.labelClassName);
+      default:
+        return cx(
+          this.props.labelClassName,
+          { active : this.state.focused || Boolean(this.state.value) }
+        );
     }
-
-    return cx(this.props.labelClassName, {
-      active : this.state.focused || Boolean(this.state.value),
-    });
   },
 
   wrapperClasses() {
