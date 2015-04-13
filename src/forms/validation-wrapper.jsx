@@ -22,7 +22,7 @@ const ValidationWrapper = React.createClass({
 
   getInitialState() {
     let child = React.Children.only(this.props.children);
-    const value = child.props.value || child.props.defaultValue;
+    const value = child.props.value || child.props.defaultValue || '';
 
     return {
       isValid : this.props.validate(value),
@@ -52,19 +52,25 @@ const ValidationWrapper = React.createClass({
   },
 
   labelClassName() {
-    if (this.state.isValid){
-      return cx(this.props.labelClassName);
-    } else {
+    if (this.state.value) {
+      if (this.state.isValid){
+        return cx(this.props.labelClassName, 'valid');
+      }
+
       return cx(this.props.labelClassName, 'invalid');
     }
+    return cx(this.props.labelClassName);
   },
 
   inputClassName() {
-    if (this.state.isValid){
-      return cx(this.props.inputClassName);
-    } else {
+    if (this.state.value) {
+      if (this.state.isValid){
+        return cx(this.props.inputClassName, 'valid');
+      }
+
       return cx(this.props.inputClassName, 'invalid');
     }
+    return cx(this.props.inputClassName);
   },
 
   render() {
