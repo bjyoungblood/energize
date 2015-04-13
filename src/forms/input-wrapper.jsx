@@ -19,6 +19,7 @@ const InputWrapper = React.createClass({
     wrapperClassName : React.PropTypes.string,
     labelClassName : React.PropTypes.string,
     inputClassName : React.PropTypes.string,
+    onChange : React.PropTypes.func,
     onFocus : React.PropTypes.func,
     onBlur : React.PropTypes.func,
   },
@@ -54,6 +55,10 @@ const InputWrapper = React.createClass({
 
     if (oldHandler) {
       oldHandler(event);
+    }
+
+    if (this.props.onChange) {
+      this.props.onChange(event);
     }
   },
 
