@@ -1,20 +1,25 @@
 
+/* label color */
 .input-field label.invalid {
   color: color("red", "lighten-2");
+}
+.input-field label.valid {
+  color: color("green", "lighten-2");
 }
 
 /* label focus color */
 .input-field input[type].invalid:focus + label {
   color: color("red", "lighten-2");
 }
+.input-field input[type].valid:focus + label {
+  color: color("green", "lighten-2");
+}
 
-/* valid color */
+/* input color */
 .input-field input[type].valid {
   border-bottom: 1px solid color("green", "lighten-2");
   box-shadow: 0 1px 0 0 color("green", "lighten-2");
 }
-
-/* invalid color */
 .input-field input[type].invalid {
   border-bottom: 1px solid color("red", "lighten-2");
   box-shadow: 0 1px 0 0 color("red", "lighten-2");
@@ -23,4 +28,7 @@
 /* icon prefix focus color */
 .input-field .prefix.active.invalid {
   color: color("red", "lighten-2");
+}
+.input-field .prefix.active.valid {
+  color: color("green", "lighten-2");
 }
