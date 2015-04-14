@@ -18,6 +18,8 @@ const InputWrapper = React.createClass({
     children : React.PropTypes.element.isRequired,
     wrapperClassName : React.PropTypes.string,
     labelClassName : React.PropTypes.string,
+    inputClassName : React.PropTypes.string,
+    onChange : React.PropTypes.func,
     onFocus : React.PropTypes.func,
     onBlur : React.PropTypes.func,
   },
@@ -54,6 +56,10 @@ const InputWrapper = React.createClass({
     if (oldHandler) {
       oldHandler(event);
     }
+
+    if (this.props.onChange) {
+      this.props.onChange(event);
+    }
   },
 
   labelClasses(inputType) {
@@ -77,6 +83,10 @@ const InputWrapper = React.createClass({
     return cx(this.props.wrapperClassName, 'input-field');
   },
 
+  inputClasses(oldClassName) {
+    return cx(oldClassName || '', this.props.inputClassName);
+  },
+
   render() {
     let child = React.Children.only(this.props.children);
 
@@ -84,6 +94,7 @@ const InputWrapper = React.createClass({
     let newProps = {
       onFocus : this.onFocus,
       onBlur : this.onBlur,
+      className : this.inputClasses(child.props.className),
     };
 
     if (child.props.id) {

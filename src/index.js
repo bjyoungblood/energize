@@ -25,6 +25,7 @@ module.exports = {
 
   // Forms
   InputWrapper : require('./forms/input-wrapper'),
+  ValidationWrapper : require('./forms/validation-wrapper'),
 
   // Utilities
   LayeredComponentMixin : require('./mixins/layered-component'),
