@@ -53,7 +53,7 @@ const ValidationWrapper = React.createClass({
 
   labelClassName() {
     if (this.state.value) {
-      if (this.state.isValid){
+      if (this.state.isValid) {
         return cx(this.props.labelClassName, 'valid');
       }
 
@@ -64,7 +64,7 @@ const ValidationWrapper = React.createClass({
 
   inputClassName() {
     if (this.state.value) {
-      if (this.state.isValid){
+      if (this.state.isValid) {
         return cx(this.props.inputClassName, 'valid');
       }
 
