@@ -1,6 +1,6 @@
 {
   "name": "energize",
-  "version": "0.10.7",
+  "version": "0.11.0",
   "description": "React components for Materialize CSS",
   "main": "dist/index.js",
   "scripts": {
