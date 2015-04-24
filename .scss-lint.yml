@@ -1,7 +1,7 @@
 ---
 linters:
   ColorVariable:
-    enabled: true
+    enabled: false
     severity: warning
   LeadingZero:
     enabled: true
