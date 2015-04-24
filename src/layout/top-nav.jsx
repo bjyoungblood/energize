@@ -1,8 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 
-import Container from '../container';
-
 const TopNav = React.createClass({
 
   propTypes : {

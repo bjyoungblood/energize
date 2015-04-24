@@ -1,7 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
 
-import Container from '../../container';
 import IconButton from '../../icon-button';
 
 const SideNavToggle = React.createClass({

@@ -6,7 +6,6 @@
 
 import React from 'react';
 import ReactTransitionGroup from 'react/lib/ReactTransitionGroup';
-import ReactCSSTransitionGroup from 'react/lib/ReactCSSTransitionGroup';
 import ReactCSSTransitionGroupChild from 'react/lib/ReactCSSTransitionGroupChild';
 
 /*
